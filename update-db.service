@@ -1,0 +1,11 @@
+[Unit]
+Description=My service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/test-pi/update-db-service/update-db.py
+User=test-pi
+#Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

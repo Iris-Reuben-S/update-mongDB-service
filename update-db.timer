@@ -1,0 +1,11 @@
+[Unit]
+Description=run db update at intervals
+
+[Timer]
+Unit=update-db
+OnUnitActiveSec=5min
+OnBootSec=10s
+
+
+[Install]
+WantedBy=timers.target
